@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="yt practice.css">
+</head>
+<body>
+    <style>
+        .search{
+    font-size:16px;
+    border-width: 1px;
+    border-style:solid;
+    border-color:rgb(200,200,200);
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left:15px;
+    padding-right:15px;
+    border-radius: 8px;
+}
+.googlesearch{
+    font-size:16px;
+    width:500px;
+    border:none;
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-left:16px;
+    padding-right:16px;
+    border-radius:30px;
+    box-shadow:0 1px rgba(0,0,0,0.25)
+
+}
+.email{
+    width:400px;
+    border-width:2px;
+}
+.agree{
+    background-color:rgb(12, 124, 235);
+    color:white;
+    border:none;
+    border-radius:30px;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-right:16px;
+    padding-left:16px;
+    width:200px;
+    cursor:pointer;
+    transition: opacity 0.10s;
+}
+.agree:active{
+    opacity:0.7;
+}
+.kazuha{
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right:5px;
+}
+.what{
+    font-size: 20px;
+    border:none;
+    width:300px;
+    vertical-align:middle; 
+}
+.twitter{
+    background-color:rgb(8, 110, 199);
+    color:white;
+    border:none;
+    border-radius:30px;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-left:16px;
+    padding-right:16px;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+}
+/*challenge*/
+.name{
+    display:block;
+    margin-bottom:5px;
+}
+.thanks{
+    width:200px;
+    display:inline-block;
+    vertical-align: middle;
+    margin-right:20px;
+}
+.logo{
+    display:block;
+   width:300px;
+   margin-left:200px;
+   margin-bottom:0;
+}
+.google-search{
+    
+    margin-top:1px;
+    border-radius: 30px;
+    padding-right:16px;
+    padding-left:16px;
+    padding-top:8px;
+    padding-bottom:8px;
+    width:400px;
+    margin-left:150px;
+    border:none;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.25);
+
+}
+/*challenge 2 */
+.firstname{
+    border-radius:5px;
+    padding-top:6px;
+    padding-bottom:6px;
+    padding-left:12px;
+    padding-right:12px;
+    width:100px;
+   margin-bottom:10px;
+   font-size:15px;
+   border-color:rgb(200,200,200);
+   border-style:solid;
+   border-width:1px;
+}
+.secondname{
+    border-radius:5px;
+    padding-top:6px;
+    padding-bottom:6px;
+    padding-right:16px;
+    padding-left:16px;
+    width:100px;
+    margin-bottom:10px;
+    font-size:15px;
+    border-color:rgb(200,200,200);
+    border-style:solid;
+    border-width:1px;
+}
+.gmail{
+    display:block;
+    border-radius:5px;
+    padding-top:6px;
+    padding-bottom:6px;
+    padding-right:12px;
+    padding-left:12px;
+    width:240px;
+    font-size:16px;
+    margin-bottom:10px;
+    border-width:1px;
+    border-style:solid;
+    border-color:rgb(200,200,200);
+}
+.signup{
+    background:rgb(0, 102, 255);
+    color:white;
+    border:none;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-right:16px;
+    padding-left:16px;
+    width:268px;
+    border-radius:5px;
+    font-weight:bold;
+    font-size:15px;
+
+}
+.uber{
+    font-size:60px;
+    margin-bottom:30px;
+}
+.pickup{
+    border-radius:2px;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:30px;
+    padding-right:30px;
+    width:450px;
+    font-size:20px;
+    display:block;
+    margin-bottom:10px;
+    background-color:rgb(233,230,230);
+    border:none;
+
+}
+.destination{
+    display:block;
+    border-radius:2px;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-right:30px;
+    padding-left:30px;
+    width:450px;
+    font-size:20px;
+    background-color:rgb(233, 230, 230);
+    margin-bottom:50px;
+    border:none;
+}
+.request{
+    background-color:black;
+    color:white;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:20px;
+    padding-left:20px;
+    border:none;
+
+}
+.schedule{
+    background-color:rgb(233, 230, 230);
+    border:none;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:20px;
+    padding-left:20px;
+    font-size:13.5px;
+    margin-left:30px;
+
+}
+    </style>
+    <input class="search" type="text" placeholder="Search">
+    <br/>
+    <br/>
+    <input class="googlesearch" type="text" placeholder="Search Google or type a URL">
+    <br/>
+    <br/>
+    <br/>
+    <label for="email">Email</label>
+    <br/>
+    <input class="email" type="email" id="email" name="email">
+    <p>By clicking Agree & Join, you agree to the Privacy Policy.</p>
+    <button class="agree">Agree & Join</button>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <img class="kazuha" src="images/R (1).jpg" alt="kazuha">
+    <input class="what" type="text" id="text" name="text" placeholder="what's happening?">
+    <button class="twitter">Tweet</button>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <!--challenge -->
+    <input class= "name" type="text" placeholder="Name">
+    <input class="mail"type="email" placeholder="Email">
+    <br/>
+    <br/>
+    <p class="thanks">Thanks for chatting with our customer support. Would you like to take our quick survey?</p>
+    <button class="yes">Yes</button>
+    <button class="no">No</button>
+    <br/>
+    <br/>
+    <br/>
+    <img class="logo" src="https://pngimg.com/uploads/google/google_PNG102344.png" alt="google">
+    <input class="google-search" type="text" id="search" name="search" placeholder="Search Google or type a URL">
+    <br/>
+    <br/>
+    <br/>
+    <!-- challenge 2-->
+    <input class="firstname" type="text" placeholder="First name" name="first name" id="firstname">
+    <input class="secondname" type="text" placeholder="First name" name="first name" id="secondname">
+    <input class="gmail" type="email" placeholder="Email" name="email" id="email">
+    <button class="signup">Sign Up</button>
+    <br/>
+    <br/>
+    <br/>
+    <form>
+        <p class="uber">Request a ride now</p>
+        <input class="pickup" type="text" placeholder="Enter pickup location" name="pickup location" id="pickup">
+        <input class="destination" type="text" placeholder="Enter destination" name="destination" id="destination">
+        <button class="request">Request Now</button>
+        <button class="schedule">Schedule for later</button>
+    </form>
+
+
+       
+      
+</body>
+</html>
