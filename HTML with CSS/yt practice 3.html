@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="yt practice 3.css">
+</head>
+<body>
+    <style>
+        .header{
+    height:55px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color:white;
+    border-bottom-width:1px;
+    border-bottom-style:solid;
+    border-bottom-color:rgb(216, 208, 208);
+    z-index:100;
+}
+.left-section{
+    display:flex;
+    align-items:center;
+
+}
+.icon-menu{
+    height:24px;
+    margin-left:24px;
+    margin-right:24px;
+}
+.icon-youtube{
+    height:20px;
+}
+.middle-section{
+    flex:1;
+    margin-left:70px;
+    margin-right:35px;
+    max-width:500px;
+    display:flex;
+    align-items: center;
+}
+.search-button{
+    width:70px;
+    height:40px;
+    position:relative;
+}
+.voice-search-button{
+    height:40px;
+    width:40px;
+    border-radius: 50px;
+    border-color:grey;
+    border-style:solid;
+    margin-left:30px;
+    
+}
+.search-button, .voice-search-button, .videolive-container{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.mid-image1{
+    height:100%;
+
+}
+.mid-image2{
+    height:100%;
+    width:100%;
+    border-radius:50px;
+    object-fit: cover;
+    
+
+}
+
+.search-bar{
+    flex:1;
+    height:36px;
+    padding-left:10px;
+    font-size:16px;
+    border-width:1px;
+    border-style:solid;
+    border-color:grey;
+    border-radius:2px;
+    box-shadow:inset 0px 1px 2px rgba(0 0 0.03);
+    margin-left:-1px;
+}
+.search-button .tooltip, .voice-search-button .tooltip, .videolive-container .tooltip{
+    position:absolute;
+    background-color:grey;
+    color:white;
+    padding-top:4px;
+    padding-bottom:4px;
+    padding-right:8px;
+    padding-left:8px;
+    border-radius:4px;
+    font-size:12px;
+    bottom:-30px;
+    opacity:0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+
+}
+.search-button:hover .tooltip, .voice-search-button:hover .tooltip, .videolive-container:hover .tooltip{
+    opacity:1;
+}
+.search-bar::placeholder{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+
+}
+
+.right-section{
+    width:180px;
+    margin-right:29px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-shrink:0;
+}
+.right-img1{
+    height:40px; 
+}
+.right-img2{
+    height:40px;
+}
+.right-img3{
+    height:40px;
+   
+}
+/*notification bellicon */
+.notification-icons{
+    position:relative;
+}
+.bellno{
+    position:absolute;
+    background-color:red;
+    color:white;
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-right:6px;
+    padding-left:6px;
+    border-radius:50px;
+    font-size:12px;
+    font-family:Arial, Helvetica, sans-serif;
+    top:0;
+    right:0;
+}
+
+/*side part*/
+.side-bar{
+    position:fixed;
+    left:0;
+    top:50px;
+    bottom:0;
+    background-color:white;
+    width:72px;
+}
+/*left side bar*/
+.side-bar{
+    position:fixed;
+    width:72px;
+    left:0;
+    bottom:0;
+    top:80px;
+    background-color:white;
+    z-index: 1;
+
+}
+.sidehome-bar{
+    height:90px;
+    margin-bottom:5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.sidehome-bar:hover{
+    background-color:rgb(230, 227, 227);
+}
+.sidehome-bar img{
+    height:25px;
+}
+.sidehome-bar div{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:9px;
+    margin-top:10px;
+}
+/*header part top*/
+body{
+    margin:0px;
+    padding-top:80px;
+    padding-left:100px;  
+    padding-right:25px;
+    background-color:rgb(248, 248, 248)  ; 
+}
+
+@media (max-width:600px){
+    .div-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width:751) and (max-width:999px){
+   .div-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+   } 
+}
+
+@media(max-width:1000px){
+    .div-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+
+.div-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+   
+}
+.video-preview{
+    width:300px;
+    display:inline-block;
+    vertical-align: top;
+}
+.thumbnil-row{
+    margin-bottom:12px;
+    position: relative;
+}
+.thumbnil{
+    width:300px;
+    display:block;
+
+}
+.video-info-grid{
+    display:grid;
+    grid-template-columns: 50px 1fr;
+}
+.video-title{
+   margin-top:0;
+   font-size:16px;
+   font-weight:700;
+   line-height:20px;
+   margin-bottom:15px;
+   margin-left:8px;
+}
+
+.profile-picture{
+    width:50px;
+    height:50px;
+    border-radius: 50px;
+}
+
+.video-author{
+    font-size:15px;
+    color:rgb(96, 96, 96);
+    margin-bottom:6px;
+    margin-top:0px;
+    margin-left:8px;
+}
+.video-stats{
+    font-size:15px;
+    color:rgb(96, 96, 96);
+    margin-top:0;
+    margin-left:8px;
+}
+
+
+
+.video-preview2{
+    width:300px;
+    display:inline-block;
+    vertical-align: top;
+}
+.thumbnil-row2{
+    margin-bottom:12px;
+    position:relative
+}
+.thumbnil2{
+    width:300px;
+    display:block;
+
+}
+.video-info-grid2{
+    display:grid;
+    grid-template-columns: 50px 1fr;
+}
+.video-title2{
+   margin-top:0;
+   font-size:16px;
+   font-weight:700;
+   line-height:20px;
+   margin-bottom:15px;
+   margin-left:8px;
+}
+
+.profile-picture2{
+    width:50px;
+    height:50px;
+    border-radius: 50px;
+}
+
+.video-author2{
+    font-size:15px;
+    color:rgb(96, 96, 96);
+    margin-bottom:6px;
+    margin-top:0px;
+    margin-left:8px;
+}
+.video-stats2{
+    font-size:15px;
+    color:rgb(96, 96, 96);
+    margin-top:0;
+    margin-left:8px;
+}
+/*video time */
+.video-time{
+    position:absolute;
+    background-color:black;
+    color:white;
+    bottom:10px;
+    right:10px;
+}
+
+
+
+
+
+
+.channel-picture{
+    display:inline-block;
+    position:relative;
+
+}
+.div-tooltip28{
+   background-color:white;
+   box-shadow: 2px 3px rgba(0,0,0,0.3);
+   width:300px;
+   border-radius:6px;
+   position:absolute;
+   top:55px;
+   z-index:300;
+
+   opacity:0;
+   pointer-events: none;
+
+   display:flex;
+   align-items:center;
+   transition:opacity 0.15s;
+    
+}
+.channel-picture:hover .div-tooltip28{
+    opacity:1;
+}
+
+.tooltip-imgprofile{
+   width:70px;
+   height:70px;
+   object-fit: cover;
+   border-radius:50px;
+   margin-right:8px;
+   
+}
+
+.tooltip-title{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:16px;
+    margin-bottom:4px;
+
+}
+.tooltip-sub{
+    color:grey;
+    font-size:15px;
+}
+
+
+    </style>
+
+    
+    <div class="header">
+        <div class="left-section">
+            <img class="icon-menu" src="icons/Screenshot 2024-03-28 104605.png" alt="icon">
+            <img class="icon-youtube" src="icons/Screenshot 2024-03-28 104619.png" alt="youtube">
+        </div>
+        <div class="middle-section">
+            <input class="search-bar" type="text" placeholder="Search">
+            <button class="search-button"><img class="mid-image1" src="icons/Screenshot 2024-03-28 202446.png" alt="searchbutton"><div class="tooltip">search</div></button>
+            <button class="voice-search-button"><img class="mid-image2" src="icons/Screenshot 2024-03-28 202456.png" alt="voice button"><div class="tooltip">search with your voice</div></button>
+        </div>
+        <div class="right-section">
+            <div class="videolive-container">
+            <img class="right-img1" src="icons/Screenshot 2024-03-28 104830.png" alt="videolive"><div class="tooltip">Go Live</div>
+            </div>
+            <div class="notification-icons">
+            <img class="right-img2" src="icons/Screenshot 2024-03-28 104839.png" alt="bellicon">
+            <div class="bellno">3</div>
+            </div>
+            <img class="right-img3" src="icons/Screenshot 2024-03-28 104848.png" alt="channel profile">
+           
+        </div>
+    </div>
+
+
+    <!--side bar-->
+
+    <div class="side-bar">
+        <div class="sidehome-bar"><img src="images/OIP.jpeg" alt=""><div>Home</div></div>
+        <div class="sidehome-bar"><img src="images/R (1).jpg" alt=""><div>Explore</div></div>
+        <div class="sidehome-bar"><img src="images/maxresdefault.jpg" alt=""><div>Subscription</div></div>
+        <div class="sidehome-bar"><img src="images/2f822f993f39ad8d0fbb0b08eeae3713.jpg" alt=""><div>Originals</div></div>
+        <div class="sidehome-bar"><img src="images/wallpapersden.com_zenitsu-agatsuma_2880x1800.jpg" alt=""><div>YouTube Musics</div></div>
+        <div class="sidehome-bar"><img src="images/wp5616286.jpg" alt=""><div>Library</div></div>
+    </div>
+
+
+
+
+<div class="div-grid">
+    <div class="video-preview">
+        <div class="thumbnil-row">
+            <a class="link-thumb" href="https://youtu.be/Sx4xVyXHl60?si=SjzWPsrs66xCD5aE"><img class="thumbnil" src="images/Screenshot 2024-03-21 191937.png" alt="anime"></a>
+            <div class="video-time">16:30</div>
+
+        </div>
+        <div class="video-info-grid">
+            <div class="channel-picture">
+                <a class="linklinkyt" href="https://youtube.com/@Relaxingghiblipiano68?si=t1L2_Juae-YXf1Rr"><img class="profile-picture" src="images/R (1).jpg" alt=""></a>
+
+
+
+
+                <div class="div-tooltip28">
+                       
+                    <img class="tooltip-imgprofile" src="images/R (1).jpg" alt="kazuha">
+                
+                <div class="sub-tooltip">
+                    <div class="tooltip-title">Relaxing Ghibli Piano</div>
+                    <div class="tooltip-sub">31.6k subscribers</div>
+                </div>
+            </div>
+
+
+
+
+
+                
+            </div>
+            <div class="video-info"> 
+                <p class="video-title">Ghibli Music Collection 2023 Best Ghibli Piano Collection</p>
+                <p class="video-author">Relaxing Ghibli Piano </p>
+                <p class="video-stats">6.4M Views &#183 8 months ago</p>
+            </div>         
+        </div>
+    </div>
+
+
+            <div class="video-preview2">
+                <div class="thumbnil-row2">
+                    <img class="thumbnil2" src="images/Screenshot 2024-03-24 191045.png" alt="anime">
+                    <div class="video-time">16:30</div>
+                </div>
+                <div class="video-info-grid2">
+                    <div class="channel-picture2">
+                        <img class="profile-picture2" src="images/R (1).jpg" alt="">
+                    </div>
+                    <div class="video-info2"> 
+                        <p class="video-title2">Best piano Ghibli Music Must listen At Least once</p>
+                        <p class="video-author2">BGM Tutoro Studio</p>
+                        <p class="video-stats2">3.1M Views &#183 8 months ago</p>
+                    </div>         
+                </div>
+            </div>
+
+
+
+            <div class="video-preview">
+                <div class="thumbnil-row">
+                    <img class="thumbnil" src="images/Screenshot 2024-03-21 191937.png" alt="anime">
+                    <div class="video-time">16:30</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="images/R (1).jpg" alt="">
+                    </div>
+                    <div class="video-info"> 
+                        <p class="video-title">Ghibli Music Collection 2023 Best Ghibli Piano Collection</p>
+                        <p class="video-author">Relaxing Ghibli Piano </p>
+                        <p class="video-stats">6.4M Views &#183 8 months ago</p>
+                    </div>         
+                </div>
+            </div>
+        
+        
+                    <div class="video-preview2">
+                        <div class="thumbnil-row2">
+                            <img class="thumbnil2" src="images/Screenshot 2024-03-24 191045.png" alt="anime">
+                            <div class="video-time">16:30</div>
+                        </div>
+                        <div class="video-info-grid2">
+                            <div class="channel-picture2">
+                                <img class="profile-picture2" src="images/R (1).jpg" alt="">
+                            </div>
+                            <div class="video-info2"> 
+                                <p class="video-title2">Best piano Ghibli Music Must listen At Least once</p>
+                                <p class="video-author2">BGM Tutoro Studio</p>
+                                <p class="video-stats2">3.1M Views &#183 8 months ago</p>
+                            </div>         
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="video-preview">
+                        <div class="thumbnil-row">
+                            <img class="thumbnil" src="images/Screenshot 2024-03-21 191937.png" alt="anime">
+                            <div class="video-time">16:30</div>
+                        </div>
+                        <div class="video-info-grid">
+                            <div class="channel-picture">
+                                <img class="profile-picture" src="images/R (1).jpg" alt="">
+                            </div>
+                            <div class="video-info"> 
+                                <p class="video-title">Ghibli Music Collection 2023 Best Ghibli Piano Collection</p>
+                                <p class="video-author">Relaxing Ghibli Piano </p>
+                                <p class="video-stats">6.4M Views &#183 8 months ago</p>
+                            </div>         
+                        </div>
+                    </div>
+                
+                
+                            <div class="video-preview2">
+                                <div class="thumbnil-row2">
+                                    <img class="thumbnil2" src="images/Screenshot 2024-03-24 191045.png" alt="anime">
+                                    <div class="video-time">16:30</div>
+                                </div>
+                                <div class="video-info-grid2">
+                                    <div class="channel-picture2">
+                                        <img class="profile-picture2" src="images/R (1).jpg" alt="">
+                                    </div>
+                                    <div class="video-info2"> 
+                                        <p class="video-title2">Best piano Ghibli Music Must listen At Least once</p>
+                                        <p class="video-author2">BGM Tutoro Studio</p>
+                                        <p class="video-stats2">3.1M Views &#183 8 months ago</p>
+                                    </div>         
+                                </div>
+                            </div>
+</div>
+
+
+
+       
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    <!--challenge -->
+    
+
+
+
+
+    
+    
+</body>
+</html>
