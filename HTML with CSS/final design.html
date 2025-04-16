@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="final design.css">
+</head>
+<body>
+    <style>
+        
+.div-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+.video-preview{
+    width:300px;
+    display:inline-block;
+    vertical-align: top;
+}
+.thumbnil-row{
+    margin-bottom:12px;
+    position: relative;
+}
+.thumbnil{
+    width:300px;
+    display:block;
+    cursor: pointer;
+    
+
+}
+.video-info-grid{
+    display:grid;
+    grid-template-columns: 50px 1fr;
+}
+.video-title{
+    margin-top:0;
+    font-size:16px;
+    font-weight:700;
+    line-height:20px;
+    margin-bottom:15px;
+    margin-left:8px;
+ }
+ /*link*/
+ .linklinkyt{
+    color:black;
+    text-decoration: none;
+ }
+ 
+.profile-picture{
+    width:50px;
+    height:50px;
+    border-radius: 50px;
+}
+
+.video-author{
+    font-size:15px;
+    color:rgb(96, 96, 96);
+    margin-bottom:6px;
+    margin-top:0px;
+    margin-left:8px;
+}
+.video-stats{
+    font-size:15px;
+    color:rgb(96, 96, 96);
+    margin-top:0;
+    margin-left:8px;
+}
+/*video time */
+.video-time{
+    position:absolute;
+    background-color:black;
+    color:white;
+    bottom:10px;
+    right:10px;
+}
+
+/*tool tip*/
+.channel-picture{
+    display:inline-block;
+    position:relative;
+
+}
+.div-tooltip28{
+   background-color:white;
+   box-shadow: 2px 3px rgba(0,0,0,0.3);
+   width:300px;
+   border-radius:6px;
+   position:absolute;
+   top:55px;
+   z-index:300;
+
+   opacity:0;
+   pointer-events: none;
+
+   display:flex;
+   align-items:center;
+   transition:opacity 0.15s;
+    
+}
+.channel-picture:hover .div-tooltip28{
+    opacity:1;
+}
+
+.tooltip-imgprofile{
+   width:70px;
+   height:70px;
+   object-fit: cover;
+   border-radius:50px;
+   margin-right:8px;
+   
+}
+
+.tooltip-title{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:16px;
+    margin-bottom:4px;
+
+}
+.tooltip-sub{
+    color:grey;
+    font-size:15px;
+}
+
+
+    </style>
+    <div class="div-grid">
+        <div class="video-preview">
+            <div class="thumbnil-row">
+                <a href="https://youtu.be/kGyePpX0pBM?si=9bEU0HpyFopHxr7O"><img class="thumbnil" src="images/Screenshot 2024-03-21 191937.png" alt="anime"></a>
+                <div class="video-time">16:30</div>
+    
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <a class="linklinkyt" href="https://youtube.com/@Relaxingghiblipiano68?si=t1L2_Juae-YXf1Rr"><img class="profile-picture" src="images/R (1).jpg" alt=""></a>
+
+                    <div class="div-tooltip28">
+                       
+                            <img class="tooltip-imgprofile" src="images/R (1).jpg" alt="kazuha">
+                        
+                        <div class="sub-tooltip">
+                            <div class="tooltip-title">Relaxing Ghibli Piano</div>
+                            <div class="tooltip-sub">31.6k subscribers</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="video-info"> 
+                    <p class="video-title">Ghibli Music Collection 2023 Best Ghibli Piano Collection</p>
+                    <p class="video-author">Relaxing Ghibli Piano </p>
+                    <p class="video-stats">6.4M Views &#183 8 months ago</p>
+                </div>         
+            </div>
+        </div>
+    
+    
+</body>
+</html>
