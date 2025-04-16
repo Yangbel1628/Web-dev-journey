@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox practice</title>
+    <link rel="stylesheet" href="flexbox.css">
+</head>
+<body style="padding-bottom:1000px;">
+    <style>
+        .container{
+    border-width:1px;
+    border-style:solid;
+    border-radius:6px;
+    border-color:rgb(200 200 200);
+    width:300px;
+}
+.flexbox{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-right:16px;
+    padding-left:16px;
+}
+.notification{
+    background-color:rgb(49 109 245);
+    color:white;
+    border-radius:20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size:14px;
+}
+
+
+.container2{
+    background-color:rgb(163, 16, 197);
+    border-width:1px;
+    width:700px;
+   
+    
+
+}
+.flexbox2{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right:16px;
+    padding-left:16px;
+    background-color:rgb(163, 16, 197);
+    color:white;
+}
+.home1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.search2{
+    width:400px;
+    border:none;
+    border-radius:20px;
+    margin-top:12px;
+    margin-bottom:12px;
+    height:30px;
+    padding-left:20px;
+}
+.button1{
+    background-color:rgb(163 16 197);
+    color:white;
+    border-color:white;
+    border-style:solid;
+    border-width:1px;
+    border-radius:2px;
+    padding-top:8px;
+    padding-bottom:8px;
+    padding-right:15px;
+    padding-left:15px;
+    font-size:16px;
+    
+}
+
+
+
+
+.row-flex{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom:20px;
+
+}
+.img{
+    height:100px;
+    width:100px;
+    object-fit: cover;
+    border-radius:50px;
+    border-style:solid;
+    border-color:aquamarine;
+    border-width:10px;
+    margin-right:25px;
+}
+.info{
+    width:250px;
+}
+.kazuha{
+    font-weight: bold;
+    margin-bottom:3px;
+    margin-top:10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:18px;
+}
+.title{
+    color:rgb(150 150 150);
+    font-size:18px;
+    margin-bottom:5px;
+    margin-top:0px;
+}
+.social{
+    color:rgb(150 150 150);
+    font-size:17px;
+}
+.button22{
+    background-color:rgb(29 155 240);
+    color:white;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:20px;
+    padding-left:20px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+
+
+.row-flex2{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom:20px;
+
+}
+.img2{
+    height:100px;
+    width:100px;
+    object-fit: cover;
+    border-radius:50px;
+    border-style:solid;
+    border-color:rgb(158, 15, 210);
+    border-width:10px;
+    margin-right:25px;
+}
+.info2{
+    width:250px;
+}
+.ei{
+    font-weight: bold;
+    margin-bottom:3px;
+    margin-top:10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:18px;
+}
+.title2{
+    color:rgb(150 150 150);
+    font-size:18px;
+    margin-bottom:5px;
+    margin-top:0px;
+}
+.social2{
+    color:rgb(150 150 150);
+    font-size:18px;
+}
+.button23{
+    background-color:rgb(29 155 240);
+    color:white;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:20px;
+    padding-left:20px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+
+
+.row-flex3{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom:20px;
+
+}
+.img3{
+    height:100px;
+    width:100px;
+    object-fit: cover;
+    border-radius:50px;
+    border-style:solid;
+    border-color:bisque;
+    border-width:10px;
+    margin-right:25px;
+}
+.info3{
+    width:250px;
+}
+.paimon{
+    font-weight: bold;
+    margin-bottom:3px;
+    margin-top:10px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:18px;
+}
+.title3{
+    color:rgb(150 150 150);
+    font-size:17px;
+    margin-bottom:5px;
+    margin-top:0px;
+}
+.social3{
+    color:rgb(150 150 150);
+    font-size:18px;
+}
+.button24{
+    background-color:rgb(29 155 240);
+    color:white;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:20px;
+    padding-left:20px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+
+
+.row-flex4{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    margin-bottom:20px;
+}
+.img4{
+    height:100px;
+    width:100px;
+    object-fit: cover;
+    border-radius:50px;
+    border-style:solid;
+    border-color:rgb(70, 10, 130);
+    border-width:10px;
+    margin-right:25px;
+    
+}
+.info4{
+    width:250px;
+}
+.sara{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:18px;
+    margin-top:10px;
+    margin-bottom:3px;
+
+}
+
+.title4{
+    color:rgb(150 150 150);
+    font-size:17px;
+    margin-bottom:5px;
+    margin-top:0px;
+}
+.social4{
+    color:rgb(150 150 150);
+    font-size:18px;
+}
+.button25{
+    background-color:rgb(29 155 240);
+    color:white;
+    border:none;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:20px;
+    padding-left:20px;
+    border-radius:4px;
+    font-weight:bold;
+    font-size:16px;
+
+
+}
+    </style>
+
+
+
+    <div style="display:flex; flex-direction:row;">
+        <div style="background-color:lightblue;" >div1 text </div>
+        <div style="background-color:lightpink;">div2<p>text</p></div>
+    </div>
+
+    <div style="display:flex; flex-direction:row; margin-top:30px;">
+        <div style="background-color:lightblue;width:100px" >100px </div>
+        <div style="background-color:lightpink; flex:1">flex</div>
+    </div>
+
+    <div style="display:flex; flex-direction:row; margin-top:30px; height:70px;border-width:1px; border-style:solid; border-color:grey; justify-content:center;">
+        <div style="background-color:lightblue;width:100px;" >100px </div>
+        <div style="background-color:lightpink;width:100px; ">flex 1</div>
+        <div style="background-color:lightblue;width:100px;" >flex2 </div>
+    </div>
+
+
+    <div style="display:flex; flex-direction:row; margin-top:30px; height:70px;border-width:1px; border-style:solid; border-color:grey; justify-content:space-between;">
+        <div style="background-color:lightblue;width:100px;" >100px </div>
+        <div style="background-color:lightpink;width:100px; ">flex 1</div>
+        <div style="background-color:lightblue;width:100px;" >flex2 </div>
+    </div>
+
+
+
+    <div style="display:flex; flex-direction:row; margin-top:30px; height:70px;border-width:1px; border-style:solid; border-color:grey; justify-content:space-between; align-items: center;">
+        <div style="background-color:lightblue;width:100px;" >100px </div>
+        <div style="background-color:lightpink;width:100px; ">flex 1</div>
+        <div style="background-color:lightblue;width:100px;" >flex2 </div>
+    </div>
+
+
+
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <!-- challenge 1 -->
+    <div style="display:flex; flex-direction:row; ">
+        <div style="background-color:lightblue;width:200px;">200px</div>
+        <div style="background-color:lightpink;width:75px;">75px</div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <div style="display:flex; flex-direction: row; justify-content: space-between;">
+        <div style="background-color:pink;">item1</div>
+        <div style="background-color:pink;">item2</div>
+        <div style="background-color:pink;">item3</div>
+        <div style="background-color:pink;">item4</div>
+    </div>
+    <br/>
+    <br/>
+
+
+
+    <div style="display:flex; flex-direction:row; border-width:1px; border-style:solid; border-color:black; height:70px; justify-content: space-between; align-items:center;">
+        <div style="background-color:lightblue;">200px</div>
+        <div style="background-color:lightpink;">75px</div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+
+    <!--challenge 2 -->
+
+    <div class="container">
+        <div class="flexbox">
+            <div>Home</div>
+            <div class="notification">14</div>
+        </div>
+        <div class="flexbox">
+            <div>Notification</div>
+            <div class="notification">3</div>
+        </div>
+        <div class="flexbox">
+            <div>Messages</div>
+            <div class="notification">5</div>
+        </div>
+    </div>
+
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    
+        <div class="flexbox2">
+            <div class="home1">Home</div>
+            <div><input class="search2" type="text" placeholder="Search"></div>
+            <div><button class="button1">Download</button></div>
+        </div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+            <div class="row-flex">
+                <img class="img" src="images/d51ddf785220f0b6d1a8f8715d5953d6.jpg" alt="kazuha">
+                <div class="info">
+                    <p class="kazuha">Kazuha</p>
+                    <p class="title">The warrior</p>
+                    <p class="social">Popular</p>
+                </div>
+                <button class="button22">Follow</button>
+            </div>
+
+
+
+            <div class="row-flex2">
+                <img class="img2" src="images/5a33de7b615cab353864937c5d28b906.jpg" alt="raiden">
+                <div class="info2">
+                 <p class="ei">Ei</p>
+                 <p class="title2">The god</p>
+                 <p class="social2">Popular</p>
+                </div>
+                <button class="button23">Follow</button>
+            </div>  
+
+
+            <div class="row-flex3">
+                <img class="img3" src="images/cover.thumb256.png" alt="Paimon">
+                <div class="info3">
+                    <p class="paimon">Paimion</p>
+                    <p class="title3">Emergency food</p>
+                    <p class="social3">Popular</p>
+                </div>
+                <button class="button24">Follow</button>
+            </div>
+
+
+            <div class="row-flex4">
+                <img class="img4" src="images/14851961642751855.png" alt="sara">
+                <div class="info4">
+                    <p class="sara">Sara</p>
+                    <p class="title4">General</p>
+                    <p class="social4">Popular</p>
+                </div>
+                <button class="button25">Follow</button>
+            </div>
+
+
+
+            <br/>
+            <br/>
+            <br/>
+
+
+            <div style="display:flex; flex-direction:row;border-color:black; border-width:1px; border-width:1px; border-style:solid; justify-content: space-between ; height:100px; align-items:center;">
+                <div style="background-color:lightblue;">div1</div>
+                <div style="background-color:lightpink">div2</div>
+            </div>
+
+            <br/>
+            <br/>
+            <br/>
+
+
+
+
+           
+
+
+
+
+
+
+            <div style="display:flex; flex-direction:row; margin-top:30px; height:70px;border-width:1px; border-style:solid; border-color:grey; justify-content:center;">
+                <div style="background-color:lightblue;width:100px;" >100px </div>
+                <div style="background-color:lightpink;width:100px; ">flex 1</div>
+                <div style="background-color:lightblue;width:100px;" >flex2 </div>
+            </div>
+
+
+            <div style="display:flex; flex-direction:row; margin-top:30px; height:70px;border-width:1px; border-style:solid; border-color:grey; justify-content:space-between; align-items:center;">
+                <div style="background-color:lightblue;width:100px;" >100px </div>
+                <div style="background-color:lightpink;width:100px; ">flex 1</div>
+                <div style="background-color:lightblue;width:100px;" >flex2 </div>
+            </div>
+
+
+        
+         
+
+
+            
+
+
+    
+</body>
+</html>
